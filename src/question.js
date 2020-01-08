@@ -16,6 +16,19 @@ export class Question {
       .then(Question.renderList)
   }
 
+
+  static fetch(token) {
+    if (!token) {
+      return Promise.resolve('<p class="error">У вас нет токена</p>')
+    }
+    return fetch(`https://podcast-question.firebaseio.com/questions.json?auth=${token}`)
+      .then(response => response.json())
+      .then(questions => {
+        console.log('Questions', questions)
+      })
+
+  }
+
   static renderList() {
     const questions = getQuestionsFromLocalstorage()
 
