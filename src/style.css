@@ -52,3 +52,26 @@
  .author {
    font-size: 0.8rem;
  }
+
+ .floating-btn {
+   bottom: 50px;
+   right: 50px;
+   position: fixed;
+ }
+
+ .modal {
+   width: 600px;
+   height: 300px;
+   margin: 100px auto;
+   background-color: #fff;
+   overflow-y: auto;
+ }
+
+ .modal>h1 {
+   text-align: center;
+
+ }
+
+ .modal .modal-content {
+   padding: 1rem;
+ }
